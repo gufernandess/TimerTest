@@ -1,0 +1,138 @@
+html {
+    height: 100%;
+    }
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpapercave.com/wp/wp2445707.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.timer {
+    position:absolute;
+	left:50%;
+	top:35%;
+	margin-left:-210px;
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    font-size: 100px;
+}
+
+.button {
+    position: absolute;
+    left:50%;
+	top:42%;
+    margin: 100px 0 0 -70px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border: 1px solid #00b4d8;
+    border-radius: 5px;
+    padding: 18px;
+    background: #000000;
+    color: #ffffff;
+    width: 200px;
+
+}
+
+.button:hover {
+    background: #00b4d8;
+    color: #000000;
+    border: none;
+}
+
+div {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    margin: 20px 0 0 20px;
+    height: 900px;
+    width: 500px;
+}
+
+.fas{
+    margin: 5px 0 0 5px;
+}
+
+.fab {
+    margin-top: 50px;
+    color: #24292e;
+}
+
+.fab:hover {
+    color: #000000;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 30px;
+}
+
+ul {
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    list-style-type: decimal;
+    margin-left: 10px;
+}
+
+.whiteRow {
+    background: #ffffff;
+    width: 400px;
+}
+
+.grayRow {
+    background: #d8d5db;
+    width: 400px;
+}
+
+.records {
+    padding-top: 25px;
+    text-align: center;
+    color: #000000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+input {
+    font-family: 'Roboto Mono', monospace;
+    color: #000000;
+    font-weight: bold;
+}
+
+.up {
+    display: none;
+}
+
+@media screen and (max-width: 660px) {
+
+    .timer {
+        font-size: 50px;
+        margin-left: -120px;
+    }
+
+    .button {
+        position: relative;
+        margin-top: 350px;
+        left: 0;
+        margin-left: 82px;
+        border: 1px solid #00b4d8;
+    }
+
+    .up {
+        display: flex;
+        margin-top: 220px;
+        background: none;
+        border: none;
+    }
+
+    body {
+        background-position: right 47% bottom 45%;
+    }
+
+    div {
+        display: none;
+    }
+} 
