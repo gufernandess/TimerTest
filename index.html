@@ -21,7 +21,10 @@
     <main>
       <p class = "timer">00:00:00</p>
       <button class = "button"><i class="fas fa-stopwatch"></i> Iniciar</button>
-      <div>
+      <!--<button class = "button"><i class="fas fa-hand-paper"></i> Parar</button>
+      <button class = "button"><i class="fab fa-creative-commons-zero"></i> Zerar</button>-->
+      <div id="div">
+        <button class="buttonBack" onclick="backIndex()"><img class="back" src="https://img.icons8.com/metro/26/000000/back.png"/></button>
         <h3><img src="https://img.icons8.com/android/24/000000/pen.png"/> Top-5 <img src="https://img.icons8.com/android/24/000000/pen.png"/></h3>
         <ul>
           <li class="whiteRow"><span style="font-weight:normal">a</span></li>
@@ -44,6 +47,6 @@
         <p class="records">Sou eu aqui! :)</p></center>
       </div>
     </main>
-    <footer><center><button class="up"><img class="img" src="https://img.icons8.com/fluent/96/000000/details-popup.png"/></button></center></footer>
+    <footer><center><button class="up" onclick="showMenu()"><img class="img" src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"/></button></center></footer>
   </body>
 </html>

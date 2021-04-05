@@ -63,6 +63,15 @@ div {
     color: #000000;
 }
 
+.back {
+    margin: 10px 0 0 0px;
+    display: none;
+}
+
+.buttonBack {
+    display: none;
+}
+
 h3 {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -123,7 +132,8 @@ input {
 
     .up {
         display: flex;
-        margin-top: 220px;
+        margin-top: 260px;
+        padding-top: 10px;
         background: none;
         border: none;
     }
@@ -132,7 +142,32 @@ input {
         background-position: right 47% bottom 45%;
     }
 
+    .whiteRow {
+        background: #ffffff;
+        width: 260px;
+    }
+    
+    .grayRow {
+        background: #d8d5db;
+        width: 260px;
+    }
+
     div {
         display: none;
+        position: absolute;
+        top: 0;
+        width: 340px;
+        height: 750px;
+        margin-left: 10px;
+    }
+
+    .back {
+        display: inherit;
+    }
+
+    .buttonBack {
+        display: inherit;
+        background: none;
+        border: none;
     }
 } 
