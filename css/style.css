@@ -19,7 +19,7 @@ body {
     font-size: 100px;
 }
 
-.button {
+.buttonStart {
     position: absolute;
     left:50%;
 	top:42%;
@@ -32,10 +32,57 @@ body {
     background: #000000;
     color: #ffffff;
     width: 200px;
+    display: inherit;
 
 }
 
-.button:hover {
+.buttonStart:hover {
+    background: #00b4d8;
+    color: #000000;
+    border: none;
+}
+
+.buttonPause {
+    position: absolute;
+    left:50%;
+	top:42%;
+    margin: 100px 0 0 -70px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border: 1px solid #00b4d8;
+    border-radius: 5px;
+    padding: 18px;
+    background: #000000;
+    color: #ffffff;
+    width: 200px;
+    display: none;
+
+}
+
+.buttonPause:hover {
+    background: #00b4d8;
+    color: #000000;
+    border: none;
+}
+
+.buttonReset {
+    position: absolute;
+    left:50%;
+	top:42%;
+    margin: 100px 0 0 -70px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border: 1px solid #00b4d8;
+    border-radius: 5px;
+    padding: 18px;
+    background: #000000;
+    color: #ffffff;
+    width: 200px;
+    display: none;
+
+}
+
+.buttonReset:hover {
     background: #00b4d8;
     color: #000000;
     border: none;
@@ -122,7 +169,23 @@ input {
         margin-left: -120px;
     }
 
-    .button {
+    .buttonStart {
+        position: relative;
+        margin-top: 350px;
+        left: 0;
+        margin-left: 82px;
+        border: 1px solid #00b4d8;
+    }
+
+    .buttonPause {
+        position: relative;
+        margin-top: 350px;
+        left: 0;
+        margin-left: 82px;
+        border: 1px solid #00b4d8;
+    }
+
+    .buttonReset {
         position: relative;
         margin-top: 350px;
         left: 0;
