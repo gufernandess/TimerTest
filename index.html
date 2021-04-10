@@ -29,22 +29,23 @@
       <div id="div">
         <button class="buttonBack" onclick="backIndex()"><img class="back" src="https://img.icons8.com/metro/26/000000/back.png"/></button>
         <h3><img src="https://img.icons8.com/android/24/000000/pen.png"/> Top-5 <img src="https://img.icons8.com/android/24/000000/pen.png"/></h3>
-        <ul>
-          <li class="whiteRow"><span style="font-weight:normal">a</span></li>
-          <li class = "grayRow"><span style="font-weight:normal">a</span></li>
-          <li class="whiteRow"><span style="font-weight:normal">a</span></li>
-          <li class = "grayRow"><span style="font-weight:normal">a</span></li>
-          <li class="whiteRow"><span style="font-weight:normal">a</span></li>
+        
+        <ul id="table">
+          <li class="whiteRow" id="zero"></span></li>
+          <li class = "grayRow" id="one"></span></li>
+          <li class="whiteRow" id="two"></span></li>
+          <li class = "grayRow" id="three"></span></li>
+          <li class="whiteRow" id="four"></span></li>
         </ul>
 
         <center><p class = "records">Melhor tempo</p>
-        <input type="reset" disabled>
+        <input type="reset" id="bestTime" disabled>
         <p class = "records">Pior tempo</p>
-        <input type="reset" disabled>
+        <input type="reset" id="worstTime" disabled>
         <p class = "records">MD5</p>
-        <input type="reset" disabled>
+        <input type="reset" id="md5" disabled>
         <p class = "records">Média geral</p>
-        <input type="reset" disabled><br></center>
+        <input type="reset" id="geral" disabled><br></center>
       
         <center><a href="https://github.com/gust-f"><i class="fab fa-github fa-3x"></i></a>
         <p class="records">Sou eu aqui! :)</p></center>

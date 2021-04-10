@@ -9,25 +9,30 @@ function backIndex() {
 document.addEventListener('keydown', function(e) {
     
     if ($( ".buttonStart" ).is( ":visible" ) && e.code == "Space"){
-        document.getElementById("start").click();
+        document.getElementById("start").click()
     }
     else if ($( ".buttonPause" ).is( ":visible" ) && e.code == "Space"){
-        document.getElementById("pause").click();
+        document.getElementById("pause").click()
     }
     else if ($( ".buttonReset" ).is( ":visible" ) && e.code == "Space"){
-        document.getElementById("reset").click();
+        document.getElementById("reset").click()
     }
 });
 
-var minute = 0;
-var second = 0;
-var millisecond = 0;
-var chronometer;
+var minute = 0
+var second = 0
+var millisecond = 0
+var finalTime = 0
+var chronometer
+var finalTimeMinuteConvertedMilliseconds = 0
+var finalTimeSecondConvertedMilliseconds = 0
+var times = new Array()
+var timesMinute = new Array()
 
 
 function start() {
 
-  chronometer = setInterval(() => { timer(); }, 10);
+  chronometer = setInterval(() => { timer() }, 10)
 
   document.getElementById("start").style.display = "none"
   document.getElementById("pause").style.display = "inherit"
@@ -35,7 +40,7 @@ function start() {
 
 function pause() {
 
-  clearInterval(chronometer);
+  clearInterval(chronometer)
 
   document.getElementById("pause").style.display = "none"
   document.getElementById("reset").style.display = "inherit"
@@ -43,13 +48,18 @@ function pause() {
 
 function reset() {
 
-  minute = 0;
-  second = 0;
-  millisecond = 0;
+  convertTimes()
+  putTimesArray()
+  timesList()
 
-  document.getElementById('minute').innerText = '00';
-  document.getElementById('second').innerText = '00';
-  document.getElementById('millisecond').innerText = '00';
+  minute = 0
+  second = 0
+  millisecond = 0
+
+  document.getElementById('minute').innerText = '00'
+  document.getElementById('second').innerText = '00'
+  document.getElementById('millisecond').innerText = '00'
+
   document.getElementById("reset").style.display = "none"
   document.getElementById("start").style.display = "inherit"
 }
@@ -57,20 +67,105 @@ function reset() {
 function timer() {
 
   if ((millisecond += 1) == 99) {
-    millisecond = 0;
-    second++;
+    millisecond = 0
+    second++
   }
   if (second == 60) {
-    second = 0;
-    minute++;
+    second = 0
+    minute++
   }
 
-  document.getElementById('minute').innerText = returnData(minute);
-  document.getElementById('second').innerText = returnData(second);
-  document.getElementById('millisecond').innerText = returnData(millisecond);
+  document.getElementById('minute').innerText = returnData(minute)
+  document.getElementById('second').innerText = returnData(second)
+  document.getElementById('millisecond').innerText = returnData(millisecond)
 }
 
 function returnData(input) {
   return input > 9 ? input : `0${input}`
 }
+
+function convertTimes(){
+
+  finalTimeMinuteConvertedMilliseconds = minute * 60000
+  finalTimeSecondConvertedMilliseconds = second * 1000
+
+  finalTime = finalTimeMinuteConvertedMilliseconds + finalTimeSecondConvertedMilliseconds + millisecond
+
+}
+
+function putTimesArray(){
+
+  // times = JSON.parse(localStorage.getItem("times"))
+  times.push(finalTime)
+  times.sort(function(a, b){return a-b})
+  localStorage.setItem("times", JSON.stringify(times))
+
+  timesMinute = times.map(function(finalTime){
+
+    second = finalTime / 1000,
+    minute = (second / 60).toFixed(0),
+    second = (second % 60).toFixed(0),
+    millisecond = (finalTime % 100),
+    finalTime = minute + ":" + second + ":" + millisecond
+
+    return finalTime
+
+  })
+
+}
+
+function timesList(){
+
+  var timesTableZero = document.getElementById('zero')
+  timesTableZero.innerHTML = "<span style='font-weight:normal'>" + timesMinute[0] + "</span>"
+
+  var timesTableOne = document.getElementById('one')
+  timesTableOne.innerHTML = "<span style='font-weight:normal'>" + timesMinute[1] + "</span>"
+
+  var timesTableTwo = document.getElementById('two')
+  timesTableTwo.innerHTML = "<span style='font-weight:normal'>" + timesMinute[2] + "</span>"
+
+  var timesTableThree = document.getElementById('three')
+  timesTableThree.innerHTML = "<span style='font-weight:normal'>" + timesMinute[3] + "</span>"
+
+  var timesTableFour= document.getElementById('four')
+  timesTableFour.innerHTML = "<span style='font-weight:normal'>" + timesMinute[4] + "</span>"
+
+  document.getElementById('bestTime').value = timesMinute[0]
+
+  var maxTime = Math.max(...times)
+  second = maxTime / 1000,
+  minute = (second / 60).toFixed(0),
+  second = (second % 60).toFixed(0),
+  millisecond = (maxTime % 100).toFixed(0),
+  maxTime = minute + ":" + second + ":" + millisecond
+
+
+  document.getElementById('worstTime').value = maxTime
+
+  var md5 = (times[0] + times[1] + times[2] + times[3] + times[4]) / 5
+  second = md5 / 1000,
+  minute = (second / 60).toFixed(0),
+  second = (second % 60).toFixed(0),
+  millisecond = (md5 % 100).toFixed(0),
+  md5 = minute + ":" + second + ":" + millisecond
+
+  document.getElementById('md5').value = md5
+
+  var geralMedia = times.reduce(function(total, numero){
+
+    return total + numero / times.length
+  }, 0)
+
+  second = geralMedia / 1000,
+  minute = (second / 60).toFixed(0),
+  second = (second % 60).toFixed(0),
+  millisecond = (geralMedia % 100).toFixed(0),
+  geralMedia = minute + ":" + second + ":" + millisecond
+
+  document.getElementById('geral').value = geralMedia
+  
+  }
+
+
 
