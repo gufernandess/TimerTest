@@ -48,7 +48,7 @@ function pause() {
 
 function reset() {
 
-  convertTimes()
+  convertTimesToMilliseconds()
   putTimesArray()
   timesList()
 
@@ -84,7 +84,7 @@ function returnData(input) {
   return input > 9 ? input : `0${input}`
 }
 
-function convertTimes(){
+function convertTimesToMilliseconds(){
 
   finalTimeMinuteConvertedMilliseconds = minute * 60000
   finalTimeSecondConvertedMilliseconds = second * 1000
@@ -93,14 +93,7 @@ function convertTimes(){
 
 }
 
-function putTimesArray(){
-
-  // times = JSON.parse(localStorage.getItem("times"))
-  times.push(finalTime)
-  times.sort(function(a, b){return a-b})
-  localStorage.setItem("times", JSON.stringify(times))
-
-  timesMinute = times.map(function(finalTime){
+function convertTimesToMinutes(finalTime){
 
     second = finalTime / 1000,
     minute = (second / 60).toFixed(0),
@@ -109,6 +102,18 @@ function putTimesArray(){
     finalTime = minute + ":" + second + ":" + millisecond
 
     return finalTime
+}
+
+function putTimesArray(){
+
+  //times = JSON.parse(localStorage.getItem("times"))
+  times.push(finalTime)
+  times.sort(function(a, b){return a-b})
+  localStorage.setItem("times", JSON.stringify(times))
+
+  timesMinute = times.map(function(finalTime){
+
+    return convertTimesToMinutes(finalTime)
 
   })
 
@@ -133,39 +138,15 @@ function timesList(){
 
   document.getElementById('bestTime').value = timesMinute[0]
 
-  var maxTime = Math.max(...times)
-  second = maxTime / 1000,
-  minute = (second / 60).toFixed(0),
-  second = (second % 60).toFixed(0),
-  millisecond = (maxTime % 100).toFixed(0),
-  maxTime = minute + ":" + second + ":" + millisecond
+  document.getElementById('worstTime').value = convertTimesToMinutes(Math.max(...times))
 
-
-  document.getElementById('worstTime').value = maxTime
-
-  var md5 = (times[0] + times[1] + times[2] + times[3] + times[4]) / 5
-  second = md5 / 1000,
-  minute = (second / 60).toFixed(0),
-  second = (second % 60).toFixed(0),
-  millisecond = (md5 % 100).toFixed(0),
-  md5 = minute + ":" + second + ":" + millisecond
-
-  document.getElementById('md5').value = md5
+  document.getElementById('md5').value = convertTimesToMinutes(((times[0] + times[1] + times[2] + times[3] + times[4]) / 5).toFixed(0))
 
   var geralMedia = times.reduce(function(total, numero){
 
     return total + numero / times.length
   }, 0)
 
-  second = geralMedia / 1000,
-  minute = (second / 60).toFixed(0),
-  second = (second % 60).toFixed(0),
-  millisecond = (geralMedia % 100).toFixed(0),
-  geralMedia = minute + ":" + second + ":" + millisecond
-
-  document.getElementById('geral').value = geralMedia
+  document.getElementById('geral').value = convertTimesToMinutes(geralMedia.toFixed(0))
   
   }
-
-
-
