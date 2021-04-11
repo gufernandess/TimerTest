@@ -95,10 +95,11 @@ function convertTimesToMilliseconds(){
 
 function convertTimesToMinutes(finalTime){
 
-    second = finalTime / 1000,
-    minute = (second / 60).toFixed(0),
-    second = (second % 60).toFixed(0),
-    millisecond = (finalTime % 100),
+    second = finalTime / 1000
+    minute = (second / 120).toFixed(0)
+    console.log(minute)
+    second = (second % 60).toFixed(0)
+    millisecond = (finalTime % 100)
     finalTime = minute + ":" + second + ":" + millisecond
 
     return finalTime
