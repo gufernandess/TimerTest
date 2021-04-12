@@ -203,7 +203,7 @@ input {
 
     body {
         background-position: right 47% bottom 45%;
-        height: 50vh;
+        height: 0vh;
         z-index: 1;
     }
 
