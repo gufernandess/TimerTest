@@ -1,9 +1,11 @@
 function showMenu() {
     document.getElementById("div").style.display = "inherit"
+    document.getElementById("folder").style.display = "none"
 }
 
 function backIndex() {
     document.getElementById("div").style.display = "none"
+    document.getElementById("folder").style.display = "inherit"
 }
 
 document.addEventListener('keydown', function(e) {

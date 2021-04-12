@@ -203,7 +203,7 @@ input {
 
     body {
         background-position: right 47% bottom 45%;
-        height: 100vh;
+        height: 50vh;
         z-index: 1;
     }
 
@@ -217,12 +217,24 @@ input {
         width: 260px;
     }
 
+    .records {
+        padding-top: 20px;
+    }
+
+    #subtitle {
+        display: none;
+    }
+
+    #git{
+        display: none;
+    }
+
     div {
         display: none;
         position: absolute;
         top: 0;
         width: 340px;
-        height: 750px;
+        height: 700px;
         margin-left: 10px;
     }
 
