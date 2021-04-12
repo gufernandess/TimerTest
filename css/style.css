@@ -247,4 +247,28 @@ input {
         background: none;
         border: none;
     }
-} 
+    
+}
+
+@media screen and (min-height: 700px){
+
+    .buttonStart {
+
+        margin-top: 370px;
+    }
+
+    .buttonPause {
+
+        margin-top: 370px;
+    }
+
+    .buttonReset {
+
+        margin-top: 370px;
+    }
+
+    .up {
+
+        margin-top: 200px;
+    }
+}
