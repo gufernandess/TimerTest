@@ -171,7 +171,7 @@ input {
 
     .buttonStart {
         position: relative;
-        margin-top: 350px;
+        margin-top: 300px;
         left: 0;
         margin-left: 82px;
         border: 1px solid #00b4d8;
@@ -179,7 +179,7 @@ input {
 
     .buttonPause {
         position: relative;
-        margin-top: 350px;
+        margin-top: 300px;
         left: 0;
         margin-left: 82px;
         border: 1px solid #00b4d8;
@@ -187,7 +187,7 @@ input {
 
     .buttonReset {
         position: relative;
-        margin-top: 350px;
+        margin-top: 300px;
         left: 0;
         margin-left: 82px;
         border: 1px solid #00b4d8;
@@ -195,7 +195,7 @@ input {
 
     .up {
         display: flex;
-        margin-top: 130px;
+        margin-top: 160px;
         padding-top: 10px;
         background: none;
         border: none;
