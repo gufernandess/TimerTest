@@ -12,7 +12,7 @@
    * [Sobre](https://github.com/gust-f/TimerTest/blob/main/README.md#-sobre)
    * [Tabela de Conteúdo](https://github.com/gust-f/TimerTest/blob/main/README.md#-tabela-de-conte%C3%BAdo)
    * [Como usar](https://github.com/gust-f/TimerTest/blob/main/README.md#-como-usar)
-      * [Versão mobile]()
+      * [Versão mobile](https://github.com/gust-f/TimerTest/blob/main/README.md#-vers%C3%A3o-mobile)
    * [Tecnologias]()
 <!--te-->
 
