@@ -1,5 +1,3 @@
-<center><img src = "assets/logoCronometro.png"></center>
-
 <h1 align = "center">⏰ TimerTest ⏰</h1>
 
 ## 📘 Sobre
