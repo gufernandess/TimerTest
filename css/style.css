@@ -250,7 +250,7 @@ input {
     
 }
 
-@media screen and (min-height: 700px){
+@media screen and (min-height: 700px) and (max-height: 800px){
 
     .buttonStart {
 
