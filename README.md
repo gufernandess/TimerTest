@@ -1,4 +1,4 @@
-<center><img src = "assets/logo.png"></center>
+<center><img src = "assets/logoCronometro.png"></center>
 
 <h1 align = "center">⏰ TimerTest ⏰</h1>
 
