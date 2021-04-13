@@ -55,5 +55,5 @@
 
 Feito com ❤️ por Gustavo Fernandes
 
-[![Twitter Badge](https://img.shields.io/badge/-@gust_f_b-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/gust_f_b)](https://twitter.com/gust_f_b) [![Linkedin Badge](https://img.shields.io/badge/-Gustavo Fernandes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gustavo-fernandes/)](https://www.linkedin.com/in/gustavo-fernandes/) 
+[![Twitter Badge](https://img.shields.io/badge/-@gust_f_b-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/gust_f_b)](https://twitter.com/gust_f_b)
 [![Gmail Badge](https://img.shields.io/badge/-gustavo63693@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:gustavo63693@gmail.com)](mailto:gustavo63693@gmail.com)
