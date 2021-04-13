@@ -9,7 +9,7 @@
 ## 📝 Tabela de conteúdo
 
 <!--ts-->
-   * [Sobre]()
+   * [Sobre](https://github.com/gust-f/TimerTest/blob/main/README.md#-sobre)
    * [Tabela de Conteudo]()
    * [Como usar]()
       * [Versão mobile]()
