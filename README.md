@@ -1,5 +1,7 @@
 <h1 align = "center">⏰ TimerTest ⏰</h1>
 
+![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)
+
 ## 📘 Sobre
 
 <p align = "justify">O TimerTest é um simples cronômetro feito para speedcubing  e ligeiramente inspirado no CSTimer, onde você marca seus tempos, que ficam registrados em uma tabela através do Session Storage do navegador.</p>
