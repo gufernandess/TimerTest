@@ -14,7 +14,7 @@
    * [Como usar](https://github.com/gust-f/TimerTest/blob/main/README.md#-como-usar)
       * [Versão mobile](https://github.com/gust-f/TimerTest/blob/main/README.md#-vers%C3%A3o-mobile)
    * [Tecnologias](https://github.com/gust-f/TimerTest/blob/main/README.md#%EF%B8%8F-tecnologias)
-   * [Autor]()
+   * [Autor](https://github.com/gust-f/TimerTest/blob/main/README.md#%EF%B8%8F-autor)
 <!--te-->
 
 <h2 align="center"> 🚧  Finalizado  🚧</h4>
