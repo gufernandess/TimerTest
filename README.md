@@ -1,6 +1,10 @@
 <h1 align = "center">⏰ TimerTest ⏰</h1>
 
+<img src = "assets/logoCronometro.png" />
+
 ![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)
+
+<br>
 
 ## 📘 Sobre
 
