@@ -10,14 +10,48 @@ function backIndex() {
 
 document.addEventListener('keydown', function(e) {
     
+  if ($( ".buttonStart" ).is( ":visible" ) && e.code == "Space"){
+
+      document.getElementById("start").style.background = "#00b4d8"
+      document.getElementById("start").style.color = "#000000"
+      document.getElementById("start").style.border = "none"
+  }
+  else if ($( ".buttonPause" ).is( ":visible" ) && e.code == "Space"){
+
+    document.getElementById("pause").style.background = "#00b4d8"
+    document.getElementById("pause").style.color = "#000000"
+    document.getElementById("pause").style.border = "none"
+  }
+  else if ($( ".buttonReset" ).is( ":visible" ) && e.code == "Space"){
+
+    document.getElementById("reset").style.background = "#00b4d8"
+    document.getElementById("reset").style.color = "#000000"
+    document.getElementById("reset").style.border = "none"
+  }
+});
+
+document.addEventListener('keyup', function(e) {
+    
     if ($( ".buttonStart" ).is( ":visible" ) && e.code == "Space"){
+
         document.getElementById("start").click()
+        document.getElementById("start").style.background = "#000000"
+        document.getElementById("start").style.color = "#ffffff"
+        document.getElementById("start").style.border = "1px solid #00b4d8"
     }
     else if ($( ".buttonPause" ).is( ":visible" ) && e.code == "Space"){
+
         document.getElementById("pause").click()
+        document.getElementById("pause").style.background = "#000000"
+        document.getElementById("pause").style.color = "#ffffff"
+        document.getElementById("pause").style.border = "1px solid #00b4d8"
     }
     else if ($( ".buttonReset" ).is( ":visible" ) && e.code == "Space"){
+
         document.getElementById("reset").click()
+        document.getElementById("reset").style.background = "#000000"
+        document.getElementById("reset").style.color = "#ffffff"
+        document.getElementById("reset").style.border = "1px solid #00b4d8"
     }
 });
 
