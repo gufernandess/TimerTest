@@ -65,7 +65,6 @@ var finalTimeSecondConvertedMilliseconds = 0
 var times = new Array()
 var timesMinute = new Array()
 
-
 function start() {
 
   chronometer = setInterval(() => { timer() }, 10)
@@ -177,7 +176,12 @@ function timesList(){
 
   document.getElementById('worstTime').value = convertTimesToMinutes(Math.max(...times))
 
-  document.getElementById('md5').value = convertTimesToMinutes(((times[0] + times[1] + times[2] + times[3] + times[4]) / 5).toFixed(0))
+  if(isNaN(times[4])){
+
+    document.getElementById('md5').value = ""
+  }else{
+    document.getElementById('md5').value = convertTimesToMinutes(((times[0] + times[1] + times[2] + times[3] + times[4]) / 5).toFixed(0))
+  }
 
   var geralMedia = times.reduce(function(total, numero){
 

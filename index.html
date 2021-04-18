@@ -28,8 +28,8 @@
       <button class = "buttonReset" id="reset" onclick="reset()"><i class="fas fa-broom"></i></i> Zerar</button>
 
       <div id="div">
-        <button class="buttonBack" onclick="backIndex()"><img class="back" src="https://img.icons8.com/metro/26/000000/back.png"/></button>
-        <h3>Top-5</h3>
+        <button class="buttonBack" onclick="backIndex()"><img class="back" id="black" src="https://img.icons8.com/metro/26/000000/back.png"/></button>
+        <h3 id="h3">Top-5</h3>
         <ul id="table">
           <li class="whiteRow" id="zero"></span></li>
           <li class = "grayRow" id="one"></span></li>
@@ -38,13 +38,13 @@
           <li class="whiteRow" id="four"></span></li>
         </ul>
         <center><p class = "records">Melhor tempo</p>
-        <input type="reset" id="bestTime" disabled>
+        <input type="reset" id="bestTime" value="" disabled>
         <p class = "records">Pior tempo</p>
-        <input type="reset" id="worstTime" disabled>
+        <input type="reset" id="worstTime" value="" disabled>
         <p class = "records">MD5</p>
-        <input type="reset" id="md5" disabled>
+        <input type="reset" id="md5" value="" disabled>
         <p class = "records">Média geral</p>
-        <input type="reset" id="geral" disabled><br></center>
+        <input type="reset" id="geral" value="" disabled><br></center>
         <center><a href="https://github.com/gust-f"><i id = "git" class="fab fa-github fa-3x"></i></a>
         <p class="records" id="subtitle">Feito com ❤️ por Gustavo Fernandes</p></center>
       </div>
