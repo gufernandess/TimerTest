@@ -10,7 +10,7 @@
 
 <p align = "justify">O TimerTest é um simples cronômetro feito para speedcubing  e ligeiramente inspirado no CSTimer, onde você marca seus tempos, que ficam registrados em uma tabela através do Session Storage do navegador.</p>
 
-<h1 align = "center">📎 Acesse o site <a href = "https://timertestjs.herokuapp.com/">aqui</a></h1>
+<h1 align = "center">📎 Acesse o site <a href="https://timertestjs.herokuapp.com/">aqui</a></h1>
 
 ## 📝 Tabela de conteúdo
 
