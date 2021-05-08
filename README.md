@@ -41,8 +41,10 @@
 
 <p align = "justify">O site é responsivo para aparellhos mobile, sendo também possível registrar seus tempos no celular, onde a tabela de tempo é acessada através do ícone de pasta na parte inferior do site.</p>
 
-<center><img src = "assets/siteMobile.png"></center>
-<center><img src = "assets/siteMobile2.png"></center>
+<p align = "center">
+  <img src = "assets/siteMobile.png">
+  <img src = "assets/siteMobile2.png">
+</p>
 
 ## 🛠️ Tecnologias
 
