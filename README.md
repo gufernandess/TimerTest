@@ -5,8 +5,8 @@
 </p>
 
 <div align="center">
-  
-![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)
+
+<img src="https://img.shields.io/github/stars/gust-f/TimerTest?style=for-the-badge">
 
 </div>
 
