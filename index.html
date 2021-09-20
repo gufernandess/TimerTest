@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-
-    <meta charset="utf-8">
-    <title>TimerTest</title>
-    <link rel="shortcut icon" href= "https://img.icons8.com/officel/16/000000/timer.png"/>
-    <script type="text/javascript" src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gustavo Fernandes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel = "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>RubiksTimer - Cronômetro para speedcubing</title>
   </head>
   <body>
-    <header></header>
+    <section id="timerBox">
+      <button class="buttonBack" onclick="backIndex()">
+        <ion-icon class="back" name="arrow-back-outline"></ion-icon>
+      </button>
+      <h3>Tabela de solves</h3>
+      <ul>
+        <li id="firstLine"></li>
+        <li id="secondLine"></li>
+        <li id="thirstLine"></li>
+        <li id="fourthLine"></li>
+        <li id="fifthLine"></li>
+      </ul>
+      <p>Melhor tempo</p>
+      <input type="reset" id="bestTime" value="" disabled>
+      <p>Pior tempo</p>
+      <input type="reset" id="worstTime" value="" disabled>
+      <p>MD5</p>
+      <input type="reset" id="md5" value="" disabled>
+      <p>Média geral</p>
+      <input type="reset" id="geral" value="" disabled><br>
+      <a href="https://github.com/gufernandess"><ion-icon id="git" name="logo-github"></ion-icon></a>
+      <p id="subtitle">Feito com ❤️ por Gustavo Fernandes</p>
+    </section>
     <main>
-      <p class = "timer" id="timer"><span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span></p>
-
-      <button class = "buttonStart" id="start" onclick="start()"><i class="fas fa-stopwatch"></i> Iniciar</button>
-      <button class = "buttonPause" id="pause" onclick="pause()"><i class="fas fa-hand-paper"></i> Parar</button>
-      <button class = "buttonReset" id="reset" onclick="reset()"><i class="fas fa-broom"></i></i> Zerar</button>
-
-      <div id="div">
-        <button class="buttonBack" onclick="backIndex()"><img class="back" id="black" src="https://img.icons8.com/metro/26/000000/back.png"/></button>
-        <h3 id="h3">Top-5</h3>
-        <ul id="table">
-          <li class="whiteRow" id="zero"></span></li>
-          <li class = "grayRow" id="one"></span></li>
-          <li class="whiteRow" id="two"></span></li>
-          <li class = "grayRow" id="three"></span></li>
-          <li class="whiteRow" id="four"></span></li>
-        </ul>
-        <center><p class = "records">Melhor tempo</p>
-        <input type="reset" id="bestTime" value="" disabled>
-        <p class = "records">Pior tempo</p>
-        <input type="reset" id="worstTime" value="" disabled>
-        <p class = "records">MD5</p>
-        <input type="reset" id="md5" value="" disabled>
-        <p class = "records">Média geral</p>
-        <input type="reset" id="geral" value="" disabled><br></center>
-        <center><a href="https://github.com/gust-f"><i id = "git" class="fab fa-github fa-3x"></i></a>
-        <p class="records" id="subtitle">Feito com ❤️ por Gustavo Fernandes</p></center>
-      </div>
-
+      <p class = "timer" id="timer">
+        <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
+      </p>
+      <button class = "buttonStart" id="start" onclick="start()"><ion-icon name="time"></ion-icon>Iniciar</button>
+      <button class = "buttonPause" id="pause" onclick="pause()"><ion-icon name="stop-circle"></ion-icon>Parar</button>
+      <button class = "buttonReset" id="reset" onclick="reset()"><ion-icon name="close-circle"></ion-icon>Zerar</button>
     </main>
-    <footer><center><button class="up" onclick="showMenu()"><img class="img" id="folder" src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"/></button></center></footer>
+    <footer>
+      <button class="showTable" onclick="showMenu()"><ion-icon class="folder" name="folder-open"></ion-icon></button>
+    </footer>
   </body>
 </html>

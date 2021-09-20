@@ -1,10 +1,10 @@
 function showMenu() {
-    document.getElementById("div").style.display = "inherit"
+    document.getElementById("timerBox").style.display = "inherit"
     document.getElementById("folder").style.display = "none"
 }
 
 function backIndex() {
-    document.getElementById("div").style.display = "none"
+    document.getElementById("timerBox").style.display = "none"
     document.getElementById("folder").style.display = "inherit"
 }
 
@@ -142,7 +142,6 @@ function convertTimesToMinutes(finalTime){
 
 function putTimesArray(){
 
-  //times = JSON.parse(localStorage.getItem("times"))
   times.push(finalTime)
   times.sort(function(a, b){return a-b})
   localStorage.setItem("times", JSON.stringify(times))
@@ -157,19 +156,19 @@ function putTimesArray(){
 
 function timesList(){
 
-  var timesTableZero = document.getElementById('zero')
+  var timesTableZero = document.getElementById('firstLine')
   timesTableZero.innerHTML = "<span style='font-weight:normal'>" + timesMinute[0] + "</span>"
 
-  var timesTableOne = document.getElementById('one')
+  var timesTableOne = document.getElementById('secondLine')
   timesTableOne.innerHTML = "<span style='font-weight:normal'>" + timesMinute[1] + "</span>"
 
-  var timesTableTwo = document.getElementById('two')
+  var timesTableTwo = document.getElementById('thirstLine')
   timesTableTwo.innerHTML = "<span style='font-weight:normal'>" + timesMinute[2] + "</span>"
 
-  var timesTableThree = document.getElementById('three')
+  var timesTableThree = document.getElementById('fourthLine')
   timesTableThree.innerHTML = "<span style='font-weight:normal'>" + timesMinute[3] + "</span>"
 
-  var timesTableFour= document.getElementById('four')
+  var timesTableFour= document.getElementById('fifthLine')
   timesTableFour.innerHTML = "<span style='font-weight:normal'>" + timesMinute[4] + "</span>"
 
   document.getElementById('bestTime').value = timesMinute[0]

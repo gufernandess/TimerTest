@@ -1,229 +1,140 @@
-html {
-    height: 100%;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap');
+
+:root {
+    --btn-color-primary: hsl(0, 0%, 0%);
+    --btn-color-secundary: hsl(190,100%,42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --grayColor: hsl(210, 14%, 89%);
+
+    --default-font: 'Roboto Mono', monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: var(--default-font);
+}
 
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpapercave.com/wp/wp2445707.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), 
+    url('https://wallpapercave.com/wp/wp2445707.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.timer {
-    position:absolute;
-	left:50%;
-	top:35%;
-	margin-left:-210px;
-    font-family: 'Roboto Mono', monospace;
-    color: #ffffff;
-    font-size: 100px;
-}
-
-.buttonStart {
-    position: absolute;
-    left:50%;
-	top:42%;
-    margin: 100px 0 0 -70px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    border: 1px solid #00b4d8;
-    border-radius: 5px;
-    padding: 18px;
-    background: #000000;
-    color: #ffffff;
-    width: 200px;
-    display: inherit;
-
-}
-
-.buttonStart:hover {
-    background: #00b4d8;
-    color: #000000;
-    border: none;
-}
-
-.buttonPause {
-    position: absolute;
-    left:50%;
-	top:42%;
-    margin: 100px 0 0 -70px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    border: 1px solid #00b4d8;
-    border-radius: 5px;
-    padding: 18px;
-    background: #000000;
-    color: #ffffff;
-    width: 200px;
-    display: none;
-
-}
-
-.buttonPause:hover {
-    background: #00b4d8;
-    color: #000000;
-    border: none;
-}
-
-.buttonReset {
-    position: absolute;
-    left:50%;
-	top:42%;
-    margin: 100px 0 0 -70px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    border: 1px solid #00b4d8;
-    border-radius: 5px;
-    padding: 18px;
-    background: #000000;
-    color: #ffffff;
-    width: 200px;
-    display: none;
-
-}
-
-.buttonReset:hover {
-    background: #00b4d8;
-    color: #000000;
-    border: none;
-}
-
-div {
-    background: #ffffff;
+section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: var(--whiteColor);
     border: none;
     border-radius: 20px;
-    margin: 20px 0 0 20px;
-    height: 900px;
+    height: 90vh;
     width: 500px;
+    margin: 2% 0 0 1.5%;
 }
 
-.fas{
-    margin: 5px 0 0 5px;
+main {
+    width: 75%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.fab {
-    margin-top: 50px;
-    color: #24292e;
+.timer, .timer span {
+    color: var(--whiteColor);
+    font-size: 6rem;
+    font-weight: 500;
 }
 
-.fab:hover {
-    color: #000000;
+main button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #00b4d8;
+    border-radius: 5px;
+    padding: 18px;
+    background: var(--btn-color-primary);
+    color: var(--whiteColor);
+    width: 200px;
 }
 
-.back {
-    margin: 10px 0 0 0px;
-    display: none;
+main button:hover {
+    background: var(--btn-color-secundary);
+    color: var(--btn-color-primary);
 }
 
-.buttonBack {
-    display: none;
-}
+main ion-icon { margin-top: 6px; }
+
+.buttonStart { display: inherit; }
+
+.buttonPause { display: none; }
+
+.buttonReset { display: none; }
+
+.buttonStart:hover { border: none; }
+
+.buttonPause:hover { border: none; }
+
+.buttonReset:hover { border: none; }
+
+.buttonBack { display: none; }
 
 h3 {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    padding-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 ul {
-    font-family: 'Roboto Mono', monospace;
-    padding-top: 25px;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     list-style-type: decimal;
-    margin-left: 10px;
 }
 
-.whiteRow {
-    background: #ffffff;
+li {
+    background: #f8f9fa;
     width: 400px;
 }
 
-.grayRow {
-    background: #d8d5db;
-    width: 400px;
-}
+li:nth-child(2n) { background: #ced4da; }
 
-.records {
-    padding-top: 25px;
-    text-align: center;
-    color: #000000;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
+p {
+    color: var(--btn-color-primary);
+    font-weight: 700;
 }
 
 input {
-    font-family: 'Roboto Mono', monospace;
-    color: #000000;
-    font-weight: bold;
+    color: var(--btn-color-primary);
+    background: var(--grayColor);
+    width: 100px;
+    border: none;
+    font-weight: 700;
 }
 
-.up {
-    display: none;
+section ion-icon {
+    font-size: 64px;
+    color: #343a40;
 }
 
-.switch {
-    position: absolute;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 15px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+section ion-icon:hover { color: var(--btn-color-primary); }
 
-@media screen and (max-width: 768px) {
+.showTable { display: none; }
+
+/*@media screen and (max-width: 768px) {
 
     .timer {
         font-size: 50px;
@@ -254,7 +165,7 @@ input {
         border: 1px solid #00b4d8;
     }
 
-    .up {
+    .showTable {
         display: flex;
         margin-top: 160px;
         padding-top: 10px;
@@ -278,7 +189,7 @@ input {
         width: 260px;
     }
 
-    .records {
+    p {
         padding-top: 20px;
     }
 
@@ -290,7 +201,7 @@ input {
         display: none;
     }
 
-    div {
+    section {
         display: none;
         position: absolute;
         top: 0;
@@ -332,4 +243,4 @@ input {
 
         margin-top: 200px;
     }
-}
+}*/
