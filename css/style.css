@@ -22,8 +22,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), 
-    url('https://wallpapercave.com/wp/wp2445707.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpapercave.com/wp/wp2445707.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
