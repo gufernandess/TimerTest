@@ -15,9 +15,7 @@
   </head>
   <body>
     <section id="timerBox">
-      <button class="buttonBack" onclick="backIndex()">
-        <ion-icon class="back" name="arrow-back-outline"></ion-icon>
-      </button>
+        <ion-icon class="back" onclick="backIndex()" name="arrow-back-outline"></ion-icon>
       <h3>Tabela de solves</h3>
       <ul>
         <li id="firstLine"></li>
@@ -44,9 +42,11 @@
       <button class = "buttonStart" id="start" onclick="start()"><ion-icon name="time"></ion-icon>Iniciar</button>
       <button class = "buttonPause" id="pause" onclick="pause()"><ion-icon name="stop-circle"></ion-icon>Parar</button>
       <button class = "buttonReset" id="reset" onclick="reset()"><ion-icon name="close-circle"></ion-icon>Zerar</button>
+
+      <ion-icon class="folder" onclick="showMenu()" name="folder-open"></ion-icon>
     </main>
-    <footer>
+    <!--<footer>
       <button class="showTable" onclick="showMenu()"><ion-icon class="folder" name="folder-open"></ion-icon></button>
-    </footer>
+    </footer>-->
   </body>
 </html>

@@ -40,12 +40,12 @@ section {
     border-radius: 20px;
     height: 90vh;
     width: 500px;
-    margin: 2% 0 0 1.5%;
+    margin-left: 1.5%;
 }
 
 main {
     width: 75%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,20 +86,13 @@ main ion-icon { margin-top: 6px; }
 
 .buttonReset { display: none; }
 
-.buttonStart:hover { border: none; }
-
-.buttonPause:hover { border: none; }
-
-.buttonReset:hover { border: none; }
-
-.buttonBack { display: none; }
-
 h3 {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 ul {
+    width: 80%;
     font-size: 1.2rem;
     font-weight: bold;
     list-style-type: decimal;
@@ -107,7 +100,7 @@ ul {
 
 li {
     background: #f8f9fa;
-    width: 400px;
+    width: 100%;
 }
 
 li:nth-child(2n) { background: #ced4da; }
@@ -128,119 +121,61 @@ input {
 section ion-icon {
     font-size: 64px;
     color: #343a40;
+    cursor: pointer;
 }
 
 section ion-icon:hover { color: var(--btn-color-primary); }
 
+.back { 
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    font-size: 32px;
+}
+
 .showTable { display: none; }
 
-/*@media screen and (max-width: 768px) {
+.folder {
+    display: none;
+    position: absolute;
+    bottom: 2%;
+    cursor: pointer;
+    font-size: 64px;
+    color: hsl(48,95%,58%);
+}
 
-    .timer {
-        font-size: 50px;
-        margin-left: -120px;
-    }
+@media screen and (max-width: 900px) {
 
-    .buttonStart {
-        position: relative;
-        margin-top: 300px;
-        left: 0;
-        margin-left: 82px;
-        border: 1px solid #00b4d8;
-    }
-
-    .buttonPause {
-        position: relative;
-        margin-top: 300px;
-        left: 0;
-        margin-left: 82px;
-        border: 1px solid #00b4d8;
-    }
-
-    .buttonReset {
-        position: relative;
-        margin-top: 300px;
-        left: 0;
-        margin-left: 82px;
-        border: 1px solid #00b4d8;
-    }
-
-    .showTable {
-        display: flex;
-        margin-top: 160px;
-        padding-top: 10px;
-        background: none;
-        border: none;
-    }
-
-    body {
-        background-position: right 47% bottom 45%;
-        height: 0vh;
+    section {
         z-index: 1;
-    }
-
-    .whiteRow {
-        background: #ffffff;
-        width: 260px;
-    }
-    
-    .grayRow {
-        background: #d8d5db;
-        width: 260px;
-    }
-
-    p {
-        padding-top: 20px;
-    }
-
-    #subtitle {
+        position: absolute;
         display: none;
     }
 
-    #git{
-        display: none;
+    .back, .folder {
+        display: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    * {
+        font-size: 14px;
+    }
+
+    main, section {
+        width: 90%;
     }
 
     section {
-        display: none;
-        position: absolute;
-        top: 0;
-        width: 340px;
-        height: 700px;
-        margin-left: 10px;
+        height: 80vh;
     }
 
-    .back {
-        display: inherit;
+    .timer, .timer span {
+        font-size: 4rem;
     }
-
-    .buttonBack {
-        display: inherit;
-        background: none;
-        border: none;
-    }
-    
 }
-
-@media screen and (min-height: 700px) and (max-height: 800px){
-
-    .buttonStart {
-
-        margin-top: 370px;
-    }
-
-    .buttonPause {
-
-        margin-top: 370px;
-    }
-
-    .buttonReset {
-
-        margin-top: 370px;
-    }
-
-    .up {
-
-        margin-top: 200px;
-    }
-}*/
