@@ -148,12 +148,27 @@ section ion-icon:hover { color: var(--btn-color-primary); }
     color: hsl(48,95%,58%);
 }
 
+@keyframes slideIn {
+
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 900px) {
 
     section {
         z-index: 1;
         position: absolute;
         display: none;
+        height: 95vh;
+        animation: slideIn .3s forwards;
+        animation-direction: alternate;
     }
 
     .back, .folder {
@@ -167,12 +182,17 @@ section ion-icon:hover { color: var(--btn-color-primary); }
         font-size: 14px;
     }
 
-    main, section {
-        width: 90%;
+    body {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+        url('https://i.pinimg.com/originals/dc/b3/3d/dcb33d15f72a2ba3a52685ea78888d7e.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
-    section {
-        height: 80vh;
+    main, section {
+        width: 90%;
     }
 
     .timer, .timer span {
