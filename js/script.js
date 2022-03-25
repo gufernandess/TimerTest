@@ -1,60 +1,3 @@
-function showMenu() {
-    document.getElementById("timerBox").style.display = "inherit"
-    document.getElementById("folder").style.display = "none"
-}
-
-function backIndex() {
-    document.getElementById("timerBox").style.display = "none"
-    document.getElementById("folder").style.display = "inherit"
-}
-
-document.addEventListener('keydown', function(e) {
-    
-  if ($( ".buttonStart" ).is( ":visible" ) && e.code == "Space"){
-
-      document.getElementById("start").style.background = "#00b4d8"
-      document.getElementById("start").style.color = "#000000"
-      document.getElementById("start").style.border = "none"
-  }
-  else if ($( ".buttonPause" ).is( ":visible" ) && e.code == "Space"){
-
-    document.getElementById("pause").style.background = "#00b4d8"
-    document.getElementById("pause").style.color = "#000000"
-    document.getElementById("pause").style.border = "none"
-  }
-  else if ($( ".buttonReset" ).is( ":visible" ) && e.code == "Space"){
-
-    document.getElementById("reset").style.background = "#00b4d8"
-    document.getElementById("reset").style.color = "#000000"
-    document.getElementById("reset").style.border = "none"
-  }
-});
-
-document.addEventListener('keyup', function(e) {
-    
-    if ($( ".buttonStart" ).is( ":visible" ) && e.code == "Space"){
-
-        document.getElementById("start").click()
-        document.getElementById("start").style.background = "#000000"
-        document.getElementById("start").style.color = "#ffffff"
-        document.getElementById("start").style.border = "1px solid #00b4d8"
-    }
-    else if ($( ".buttonPause" ).is( ":visible" ) && e.code == "Space"){
-
-        document.getElementById("pause").click()
-        document.getElementById("pause").style.background = "#000000"
-        document.getElementById("pause").style.color = "#ffffff"
-        document.getElementById("pause").style.border = "1px solid #00b4d8"
-    }
-    else if ($( ".buttonReset" ).is( ":visible" ) && e.code == "Space"){
-
-        document.getElementById("reset").click()
-        document.getElementById("reset").style.background = "#000000"
-        document.getElementById("reset").style.color = "#ffffff"
-        document.getElementById("reset").style.border = "1px solid #00b4d8"
-    }
-});
-
 var minute = 0
 var second = 0
 var millisecond = 0
@@ -64,40 +7,6 @@ var finalTimeMinuteConvertedMilliseconds = 0
 var finalTimeSecondConvertedMilliseconds = 0
 var times = new Array()
 var timesMinute = new Array()
-
-function start() {
-
-  chronometer = setInterval(() => { timer() }, 10)
-
-  document.getElementById("start").style.display = "none"
-  document.getElementById("pause").style.display = "inherit"
-}
-
-function pause() {
-
-  clearInterval(chronometer)
-
-  document.getElementById("pause").style.display = "none"
-  document.getElementById("reset").style.display = "inherit"
-}
-
-function reset() {
-
-  convertTimesToMilliseconds()
-  putTimesArray()
-  timesList()
-
-  minute = 0
-  second = 0
-  millisecond = 0
-
-  document.getElementById('minute').innerText = '00'
-  document.getElementById('second').innerText = '00'
-  document.getElementById('millisecond').innerText = '00'
-
-  document.getElementById("reset").style.display = "none"
-  document.getElementById("start").style.display = "inherit"
-}
 
 function timer() {
 

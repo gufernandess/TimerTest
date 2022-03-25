@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+:root {
+    --color-primary: hsl(209, 100%, 20%);
+    --color-secondary: 	hsl(216, 100%, 4%);
+    --color-terciary: hsl(50, 100%, 52%);
+    --white-color: hsl(0, 0%, 100%);
+
+    --default-font: 'Roboto Mono', monospace;
+    --default-size: 16px;
+}

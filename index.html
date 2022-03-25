@@ -2,48 +2,60 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Gustavo Fernandes">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gustavo Fernandes">
+    <meta name="description" content="Marque e registre seu tempo de forma simples e prática!">
+
     <link rel="shortcut icon" href="images/logo.png"/>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/generic.css">
+    <link rel="stylesheet" href="settings/global.css">
+    <link rel="stylesheet" href="settings/reset.css">
+    <link rel="stylesheet" href="settings/responsive.css">
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>RubiksTimer - Cronômetro para speedcubing</title>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="js/showTable.js" defer></script>
+    <script type="text/javascript" src="js/switchButtons.js" defer></script>
+
+    <title>Timer | Cronômetro para speedcubing</title>
+
   </head>
   <body>
-    <section id="timerBox">
-        <ion-icon class="back" onclick="backIndex()" name="arrow-back-outline"></ion-icon>
-      <h3>Tabela de solves</h3>
-      <ul>
-        <li id="firstLine"></li>
-        <li id="secondLine"></li>
-        <li id="thirstLine"></li>
-        <li id="fourthLine"></li>
-        <li id="fifthLine"></li>
-      </ul>
-      <p>Melhor tempo</p>
-      <input type="reset" id="bestTime" value="" disabled>
-      <p>Pior tempo</p>
-      <input type="reset" id="worstTime" value="" disabled>
-      <p>MD5</p>
-      <input type="reset" id="md5" value="" disabled>
-      <p>Média geral</p>
-      <input type="reset" id="geral" value="" disabled><br>
-      <a href="https://github.com/gufernandess"><ion-icon id="git" name="logo-github"></ion-icon></a>
-      <p id="subtitle">Feito com ❤️ por Gustavo Fernandes</p>
-    </section>
     <main>
-      <p class = "timer" id="timer">
-        <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
-      </p>
-      <button class = "buttonStart" id="start" onclick="start()"><ion-icon name="time"></ion-icon>Iniciar</button>
-      <button class = "buttonPause" id="pause" onclick="pause()"><ion-icon name="stop-circle"></ion-icon>Parar</button>
-      <button class = "buttonReset" id="reset" onclick="reset()"><ion-icon name="close-circle"></ion-icon>Zerar</button>
-
-      <ion-icon class="folder" onclick="showMenu()" name="folder-open"></ion-icon>
+      <section class="box">
+        <ion-icon class="back" name="arrow-back-outline"></ion-icon>
+        <h3>Tabela de solves</h3>
+        <ul>
+          <li id="firstLine"></li>
+          <li id="secondLine"></li>
+          <li id="thirstLine"></li>
+          <li id="fourthLine"></li>
+          <li id="fifthLine"></li>
+        </ul>
+        <p>Melhor tempo</p>
+        <input type="reset" id="bestTime" value="" disabled>
+        <p>Pior tempo</p>
+        <input type="reset" id="worstTime" value="" disabled>
+        <p>MD5</p>
+        <input type="reset" id="md5" value="" disabled>
+        <p>Média geral</p>
+        <input type="reset" id="geral" value="" disabled><br>
+        <a href="https://github.com/gufernandess"><ion-icon class="github" name="logo-github"></ion-icon></a>
+        <p id="subtitle">Feito com ❤️ por Gustavo Fernandes</p>
+      </section>
+        <section class="cronometer">
+        <p class = "timer" id="timer">
+          <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
+        </p>
+        <button id="start" onclick="start()"><ion-icon class = "button-icon" name="time"></ion-icon>Iniciar</button>
+        <ion-icon class="folder" name="folder-open"></ion-icon>
+      </section>
     </main>
   </body>
 </html>

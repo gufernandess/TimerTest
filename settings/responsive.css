@@ -1,0 +1,33 @@
+@media screen and (max-width: 900px) {
+
+    .box {
+        z-index: 1;
+        position: absolute;
+        display: none;
+        height: 95vh;
+        animation-direction: alternate;
+    }
+
+    .back, .folder {display: inherit;}
+}
+
+@media screen and (max-width: 600px) {
+
+    .timer, .timer span {font-size: 4rem;}
+
+    .button {padding: 14px; font-size: 1.2rem;}
+
+    .box ion-icon, .folder {font-size: 3.5rem;}
+
+    .box {width: 90%;}
+
+}
+
+@media screen and (max-width: 490px) {
+
+    .box {width: 90%;}
+
+    .box, ul, p {font-size: 0.9rem;}
+
+    .box ion-icon {font-size: 2.5rem;}
+}

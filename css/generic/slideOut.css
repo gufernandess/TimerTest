@@ -1,0 +1,11 @@
+@keyframes slideOut {
+
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+}

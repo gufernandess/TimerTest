@@ -1,0 +1,11 @@
+.cronometer {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timer, .timer span {color: var(--white-color); font-size: 6rem; font-weight: 500;}

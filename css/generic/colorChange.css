@@ -1,0 +1,6 @@
+@keyframes color-change {
+    0% {background: var(--color-primary);}
+    
+    100% {background: var(--color-terciary); color: var(--color-primary);}
+  }
+  
