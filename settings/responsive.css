@@ -27,7 +27,7 @@
 
     .box {width: 90%;}
 
-    .box, ul, p {font-size: 0.9rem;}
+    .box, ul, p {font-size: 0.85rem;}
 
-    .box ion-icon {font-size: 2.5rem;}
+    .box ion-icon {font-size: 2.8rem;}
 }

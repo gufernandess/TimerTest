@@ -1,32 +1,41 @@
 var button = document.querySelector("button");
+var timerBox = document.querySelector(".timer");
 
   function start() {
-
-    chronometer = setInterval(() => {timer()}, 10);
-
-    button.textContent = "Parar";
+    countingTime();
+    button.innerHTML = "<ion-icon class='button-icon' name='hand'></ion-icon>Parar";
+    button.style.opacity = "0";
   }
   
   function pause() {
-  
     clearInterval(chronometer);
-
-    button.textContent = "Zerar";
+    button.innerHTML = "<ion-icon class='button-icon' name='checkmark-circle'></ion-icon>Zerar";
+    button.style.opacity = "1";
   }
   
   function reset() {
-  
-    convertTimesToMilliseconds()
-    putTimesArray()
-    timesList()
+    convertToMilliseconds();
+    insertTimeOnArray();
+    insertTimeOnTheTable();
 
-    document.querySelectorAll("span").innerText = "00";
+    timerBox.innerHTML = "<span class='minute'>00</span>:<span class='second'>00</span>:<span class='millisecond'>00</span>";
 
-    button.textContent = "Parar";
+    minute = second = millisecond = 0;
+
+    button.innerHTML = "<ion-icon class='button-icon' name='time'></ion-icon>Iniciar";
+    
   }
 
   button.addEventListener('click', () => {
       if(button.textContent == "Iniciar") start();
-      if(button.textContent == "Parar") pause();
-      if(button.textContent == "Zerar") reset();
-  });
+      else if(button.textContent == "Parar") pause();
+      else if(button.textContent == "Zerar") reset();
+  }); 
+
+  document.addEventListener('keyup', e => {
+    if(e.keyCode == 32) {
+      if(button.textContent == "Iniciar") start();
+      else if(button.textContent == "Parar") pause();
+      else if(button.textContent == "Zerar") reset();
+    }
+});

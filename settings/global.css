@@ -5,6 +5,7 @@
     --color-secondary: 	hsl(216, 100%, 4%);
     --color-terciary: hsl(50, 100%, 52%);
     --white-color: hsl(0, 0%, 100%);
+    --red-timer: hsl(5, 81%, 38%);
 
     --default-font: 'Roboto Mono', monospace;
     --default-size: 16px;

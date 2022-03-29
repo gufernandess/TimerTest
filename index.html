@@ -17,11 +17,15 @@
     <link rel="stylesheet" href="settings/reset.css">
     <link rel="stylesheet" href="settings/responsive.css">
     
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <script type="text/javascript" src="js/insertTime.js" defer></script>
     <script type="text/javascript" src="js/showTable.js" defer></script>
     <script type="text/javascript" src="js/switchButtons.js" defer></script>
+    <script type="text/javascript" src="js/convertTime.js" defer></script>
+    <script type="text/javascript" src="js/counting.js" defer></script>
+    <script type="text/javascript" src="js/checkOutput.js" defer></script>
 
     <title>Timer | Cronômetro para speedcubing</title>
 
@@ -29,31 +33,32 @@
   <body>
     <main>
       <section class="box">
-        <ion-icon class="back" name="arrow-back-outline"></ion-icon>
-        <h3>Tabela de solves</h3>
+        <ion-icon class="back" name="arrow-round-back"></ion-icon>
+        <h3>Solves</h3>
         <ul>
-          <li id="firstLine"></li>
-          <li id="secondLine"></li>
-          <li id="thirstLine"></li>
-          <li id="fourthLine"></li>
-          <li id="fifthLine"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
         <p>Melhor tempo</p>
-        <input type="reset" id="bestTime" value="" disabled>
+        <input type="reset" value="" disabled>
         <p>Pior tempo</p>
-        <input type="reset" id="worstTime" value="" disabled>
+        <input type="reset" value="" disabled>
         <p>MD5</p>
-        <input type="reset" id="md5" value="" disabled>
+        <input type="reset" value="" disabled>
         <p>Média geral</p>
-        <input type="reset" id="geral" value="" disabled><br>
+        <input type="reset" value="" disabled>
+        <br>
         <a href="https://github.com/gufernandess"><ion-icon class="github" name="logo-github"></ion-icon></a>
         <p id="subtitle">Feito com ❤️ por Gustavo Fernandes</p>
       </section>
         <section class="cronometer">
         <p class = "timer" id="timer">
-          <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
+          <span class="minute">00</span>:<span class="second">00</span>:<span class="millisecond">00</span>
         </p>
-        <button id="start" onclick="start()"><ion-icon class = "button-icon" name="time"></ion-icon>Iniciar</button>
+        <button><ion-icon class="button-icon" name="time"></ion-icon>Iniciar</button>
         <ion-icon class="folder" name="folder-open"></ion-icon>
       </section>
     </main>

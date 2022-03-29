@@ -40,7 +40,7 @@ input {
 
 .box ion-icon {font-size: 64px; color: #343a40; cursor: pointer;}
 
-.box ion-icon:hover {color: var(--color-secondary);}
+.box ion-icon:hover {animation: color-change-icon .2s linear alternate both;}
 
 .back { 
     display: none;

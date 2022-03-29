@@ -3,4 +3,10 @@
     
     100% {background: var(--color-terciary); color: var(--color-primary);}
   }
+
+@keyframes color-change-icon {
+  0% {color: #343a40;}
+    
+  100% {color: var(--color-secondary);}
+}
   
