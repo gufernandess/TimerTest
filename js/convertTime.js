@@ -12,14 +12,14 @@ function convertToMilliseconds() {
   
   }
   
-  function convertToMinutes(finalTime) {
+function convertToMinutes(finalTime) {
   
-      second = finalTime / 1000;
-      minute = (second / 120).toFixed(0);
-      second = (second % 60).toFixed(0);
-      millisecond = (finalTime % 100);
+    second = finalTime / 1000;
+    minute = (second / 120).toFixed(0);
+    second = (second % 60).toFixed(0);
+    millisecond = (finalTime % 100);
 
-      finalTime = returnTime(minute) + ":" + returnTime(second) + ":" + returnTime(millisecond);
+    finalTime = returnTime(minute) + ":" + returnTime(second) + ":" + returnTime(millisecond);
   
-      return finalTime;
-  }
+    return finalTime;
+}

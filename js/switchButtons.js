@@ -5,12 +5,22 @@ var timerBox = document.querySelector(".timer");
     countingTime();
     button.innerHTML = "<ion-icon class='button-icon' name='hand'></ion-icon>Parar";
     button.style.opacity = "0";
+
+    button.style.position = "absolute";
+
+    button.style.width = "100%";
+    button.style.height = "100vh";
   }
   
   function pause() {
     clearInterval(chronometer);
     button.innerHTML = "<ion-icon class='button-icon' name='checkmark-circle'></ion-icon>Zerar";
     button.style.opacity = "1";
+
+    button.style.position = "relative";
+
+    button.style.width = "200px";
+    button.style.height = "auto";
   }
   
   function reset() {

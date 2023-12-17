@@ -1,3 +1,9 @@
+@media screen and (max-width: 1400px) {
+
+    #scramble {font-size: 1.5em;}
+    
+}
+
 @media screen and (max-width: 900px) {
 
     .box {

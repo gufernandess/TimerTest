@@ -1,0 +1,6 @@
+#scramble {
+    color: var(--color-terciary);
+    font-size: 2em;
+    position: absolute;
+    top: 10%;
+}
